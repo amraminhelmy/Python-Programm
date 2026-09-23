@@ -1,0 +1,10 @@
+{
+    "terminal.integrated.fontSize": 20,
+    "python-envs.pythonProjects": [
+        {
+            "path": "SL/LinearSearch.py",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
+}
