@@ -1,17 +1,15 @@
-import LinkedLists
-
 class Queue:
     def __init__(self):
-        self._list = LinkedLists.LinkedList()
+        self._list = []
 
     def enqueue(self, data):
         self._list.append(data)
 
     def dequeue(self):
-        return self._list.pop_first()
+        return self._list.pop(0)
 
     def is_empty(self):
-        return self._list.is_empty()
+        return len(self._list) == 0
 
 Students = Queue()
 Students.enqueue("John")

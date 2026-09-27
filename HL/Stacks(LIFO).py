@@ -1,8 +1,6 @@
-import LinkedLists
-
 class Stack:
     def __init__(self):
-        self._list = LinkedLists.LinkedList()
+        self._list = []
 
     def push(self, data):
         self._list.append(data)
@@ -11,7 +9,7 @@ class Stack:
         return self._list.pop()
 
     def is_empty(self):
-        return self._list.is_empty()
+        return len(self._list) == 0
 
 Students = Stack()
 Students.push("John")
