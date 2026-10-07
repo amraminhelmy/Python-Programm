@@ -1,15 +1,22 @@
-x=(int(input("Input a number")))
+#x=(int(input("Input a number")))
+#
+#while x < 11 :
+ #   print("x is 10 or less than 10")
+   # x = int(input("Input a number"))
 
-while x < 11 :
-    print("x is less than 10")
-    x = int(input("Input a number"))
+Students = ["edo", "Alice", "bob", "James", "alice", "bob"]
+name = input("Input a name to search for")
 
-Students = ["Alice", "bob", "James", "alice", "bob"]
-print(len(Students))
-i = 0
-found = False
-while i < len(Students) and not found:
-    if Students[i] == "bob":
-        print("found in location " + str(i))
-        found = True
-    i += 1
+def LinearSearch (target,list):
+    i = 0
+    found = False #which means not found yet
+    while i < len(list) and found == False:
+        if list[i] == target:
+            print("found in location " + str(i))
+            found = True
+        i = i + 1
+
+    if not found:
+        print(target + " not found")
+
+print(LinearSearch(name,Students))

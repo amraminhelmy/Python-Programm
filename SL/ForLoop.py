@@ -14,8 +14,11 @@ for student in Students2:
     if student == "bob":
         print("found in location " + str(count))
     count += 1
-Students2.append("bob")
-Students2.remove("James")
+Students2.append("edo")
+Students2.remove("Alice")
+
 print(Students2)
+
+
 
 

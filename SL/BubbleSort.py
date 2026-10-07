@@ -10,8 +10,3 @@ for i in range(0,len(Students1)-1):
     if not Swapping:
         break
 print("Sorted Students1:", Students1)
-
-
-            
-
-    
