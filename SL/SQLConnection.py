@@ -49,5 +49,6 @@ class Person:
             return cursor.fetchone()[0]
 
 Amr=Person("Amr", 20)
-Amr.set_name("AmrHelmy")
+Amr.set_name("AmrHelmyALivse")
 print(Amr.get_name())
+
