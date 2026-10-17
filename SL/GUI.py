@@ -1,5 +1,7 @@
+import sqlite3
 from tkinter import *
 from tkinter import messagebox
+from unittest import result
 
 window = Tk()
 window.geometry("1200x800")
@@ -7,6 +9,7 @@ window.title("Bunny")
 window.configure(bg="lightblue")
 window.config(padx=20, pady=20)
 window.config(highlightbackground="red", highlightthickness=2)
+
 
 photo = PhotoImage(file="2.png")
 label = Label(window, image=photo)
@@ -28,10 +31,28 @@ def submit():
     user_input = entry.get()
     print(f"User input: {user_input}")
 
+def find():
+    Name = entry.get()
+    with sqlite3.connect('myfirstdb.db') as connection:
+        cursor = connection.cursor()
+        # Execute SQL commands here
+        cursor.execute('SELECT sqlite_version();')
+        print(cursor.fetchone())
+        cursor.execute('SELECT Name FROM Students WHERE Name = ?', (Name,))
+        result = cursor.fetchone()
+    if result is not None:
+        
+        print("found")
+    else:
+        print("Not Found", "No matching record found.")
+    return None
 
-submit_button = Button(window, text="Submit", command=submit)
+submit_button = Button(window, text="Submit", command=find)
 entry = Entry(window)
 entry.pack()
+
+
+    
 submit_button.pack()
 
 def warning():
