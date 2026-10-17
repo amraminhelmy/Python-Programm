@@ -40,4 +40,14 @@ def warning():
 warning_button = Button(window, text="Show Warning", command=warning)
 warning_button.pack()
 
+def yes_no():
+    response = messagebox.askyesno("Question", "Do you want to proceed?")
+    if response:
+        print("User chose Yes.")
+    else:
+        print("User chose No.")
+
+yes_no_button = Button(window, text="Yes/No", command=yes_no)
+yes_no_button.pack()
+
 window.mainloop()
