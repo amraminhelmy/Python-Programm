@@ -1,3 +1,6 @@
+from AccessModifiers import Car
+
+
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -40,3 +43,9 @@ print("Name after attempting to set to 'Amr123':", Amr.get_name())
 Amr.set_name("Amr")  # Valid name
 print("Name after setting to 'Amr':", Amr.get_name())
 Amr.greet()
+
+
+bmw = Car("BMW", "X5", 2020)
+bmw.set_price(60000)
+print("Car Price:", bmw.get_price())
+print("Car Model:", bmw.get_model())

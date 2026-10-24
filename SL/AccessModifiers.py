@@ -1,12 +1,12 @@
 class Car:
     def __init__(self, carprice, carmodel, carcolor):
-        self.__price = carprice
+        self._price = carprice
         self._model = carmodel
         self.color = carcolor
 
     # Defining Mutator Method
     def set_price(self, carprice):
-        self.__price = carprice
+        self._price = carprice
 
     def set_model(self, carmodel):
         self._model = carmodel
@@ -16,7 +16,7 @@ class Car:
 
     # Defining Accessor Method
     def get_price(self):
-        return self.__price
+        return self._price
 
     def get_model(self):
         return self._model
@@ -39,6 +39,6 @@ print (myCar.get_model())
 print (myCar.get_price())
 print (myCar.get_color())
 
-print(myCar.__price)  # This will raise an AttributeError since __price  is private
+#print(myCar.__price)  # This will raise an AttributeError since __price  is private
 print(myCar._model)  # This will print 'Porche' since _model is protected and can be accessed outside the class
 print(myCar.color)  # This will print 'Blue' since color is public and can be accessed outside the class
