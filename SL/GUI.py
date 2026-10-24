@@ -6,7 +6,7 @@ from unittest import result
 window = Tk()
 window.geometry("1200x800")
 window.title("Bunny")
-window.configure(bg="lightblue")
+window.configure(bg="blue")
 window.config(padx=20, pady=20)
 window.config(highlightbackground="red", highlightthickness=2)
 
@@ -21,7 +21,7 @@ def increment():
     counter += 1
     print(f"Button clicked {counter} times!")
 
-text_label = Label(window, text=f"Button clicked {counter} times!", font=("Arial", 12), bg="lightblue")
+text_label = Label(window, text=f"Button clicked {counter} times!", font=("Arial", 12), bg="blue")
 text_label.pack()
 
 button = Button(window, text="Bunny", command=lambda: [increment(), text_label.config(text=f"Button Bunny clicked {counter} times!")])
@@ -47,7 +47,7 @@ def find():
         print("Not Found", "No matching record found.")
     return None
 
-submit_button = Button(window, text="Submit", command=find)
+submit_button = Button(window, text="Submit", command=find, bg="green", fg="white", font=("Arial", 12, "bold"))
 entry = Entry(window)
 entry.pack()
 

@@ -6,11 +6,12 @@ B: int = 5
 C: float = 5.0
 D: chr = 5
 E: str = "5"
-F: bool = True
-G: list = [1, 2, 3]
-H: tuple = (1, 2, 3)
-I: set = {1, 2, 3}
-J: dict = {"one": 1, "two": 2, "three": 3}
+F: bool = True 
+G: list = [1, 2, 3] #Dynamic list
+H: tuple = (1, 2, 3) #Static tuple
+I: set = {1, 2, 3} #Unordered collection of unique elements
+J: dict = {"one": 1, "two": 2, "three": 3} #Key-value pairs
+K: tuple = ( (1, 2, 3), (4, 5, 6), (7, 8, 9) ) #Nested tuple
 print("Data types using type hints:")
 print("A is of type:", type(A))
 print("B is of type:", type(B))
@@ -34,6 +35,7 @@ g = list([1, 2, 3])
 h = tuple((1, 2, 3))
 i = set({1, 2, 3})
 j = dict({"one": 1, "two": 2, "three": 3})
+k = ( (1, 2, 3), (4, 5, 6), (7, 8, 9) )
 print("Data types using type casting:")
 print("a is of type:", type(a))
 print("b is of type:", type(b))
