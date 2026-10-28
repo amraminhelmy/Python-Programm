@@ -25,20 +25,20 @@ class Car:
         return self.color
 
 # Creating an object
-myCar = Car(10000, 'Ford', 'Red');
+MyBMW = Car(10000, 'BMW', 'Red');
 
-print (myCar.get_model())
-print (myCar.get_price())
-print (myCar.get_color())
+print (MyBMW.get_model())
+print (MyBMW.get_price())
+print (MyBMW.get_color())
 
-myCar.set_model('Porche')
-myCar.set_price(20000)
-myCar.set_color('Blue')
+MyBMW.set_model('Porche')
+MyBMW.set_price(20000)
+MyBMW.set_color('Blue')
 
-print (myCar.get_model())
-print (myCar.get_price())
-print (myCar.get_color())
+print (MyBMW.get_model())
+print (MyBMW.get_price())
+print (MyBMW.get_color())
 
-#print(myCar.__price)  # This will raise an AttributeError since __price  is private
-print(myCar._model)  # This will print 'Porche' since _model is protected and can be accessed outside the class
-print(myCar.color)  # This will print 'Blue' since color is public and can be accessed outside the class
+#print(MyBMW.__price)  # This will raise an AttributeError since __price  is private
+print(MyBMW._model)  # This will print 'Porche' since _model is protected and can be accessed outside the class
+print(MyBMW.color)  # This will print 'Blue' since color is public and can be accessed outside the class
