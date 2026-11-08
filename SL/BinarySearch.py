@@ -1,7 +1,8 @@
-SortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-target = 5
+SortedArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+target = 'e'
 min = 0
 max = len(SortedArray) - 1
+print(len(SortedArray))
 found = False
 while min <= max and not found:
     mid = (min + max) // 2
