@@ -1,0 +1,74 @@
+import sqlite3
+from tkinter import *
+from tkinter import messagebox
+from unittest import result
+
+window = Tk()
+window.geometry("1200x800")
+window.title("Bunny")
+window.configure(bg="blue")
+window.config(padx=20, pady=20)
+window.config(highlightbackground="red", highlightthickness=2)
+
+
+photo = PhotoImage(file="2.png")
+label = Label(window, image=photo)
+label.pack()
+
+counter = 0
+def increment():
+    global counter
+    counter += 1
+    print(f"Button clicked {counter} times!")
+
+text_label = Label(window, text=f"Button clicked {counter} times!", font=("Arial", 12), bg="blue")
+text_label.pack()
+
+button = Button(window, text="Bunny", command=lambda: [increment(), text_label.config(text=f"Button Bunny clicked {counter} times!")])
+button.pack()
+
+def submit():
+    user_input = entry.get()
+    print(f"User input: {user_input}")
+
+def find():
+    Name = entry.get()
+    with sqlite3.connect('myfirstdb.db') as connection:
+        cursor = connection.cursor()
+        # Execute SQL commands here
+        cursor.execute('SELECT sqlite_version();')
+        print(cursor.fetchone())
+        cursor.execute('SELECT Name FROM Students WHERE Name = ?', (Name,))
+        result = cursor.fetchone()
+    if result is not None:
+        
+        print("found")
+    else:
+        print("Not Found", "No matching record found.")
+    return None
+
+submit_button = Button(window, text="Submit", command=find, bg="green", fg="white", font=("Arial", 12, "bold"))
+entry = Entry(window)
+entry.pack()
+
+
+    
+submit_button.pack()
+
+def warning():
+    messagebox.showwarning("Warning", "This is a warning message!")
+
+warning_button = Button(window, text="Show Warning", command=warning)
+warning_button.pack()
+
+def yes_no():
+    response = messagebox.askyesno("Question", "Do you want to proceed?")
+    if response:
+        print("User chose Yes.")
+    else:
+        print("User chose No.")
+
+yes_no_button = Button(window, text="Yes/No", command=yes_no)
+yes_no_button.pack()
+
+window.mainloop()
