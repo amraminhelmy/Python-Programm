@@ -1,7 +1,6 @@
 import sqlite3
 from tkinter import *
 from tkinter import messagebox
-from unittest import result
 
 window = Tk()
 window.geometry("1200x800")
