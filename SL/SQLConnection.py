@@ -33,7 +33,7 @@ class Person:
                     print("Database location:", cursor.execute("PRAGMA database_list").fetchall())
                     print("Existing tables:", cursor.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall())
                     cursor.execute('INSERT INTO Students (Name) VALUES (?)', (self.name,))
-                    
+        
                     cursor.close()
 
         except ValueError as e:
